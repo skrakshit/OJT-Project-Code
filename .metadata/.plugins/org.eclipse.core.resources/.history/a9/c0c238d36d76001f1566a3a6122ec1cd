@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife Event</title>
+    
+ 
+    <link href="../css1/style.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Quicksand:wght@600;700&display=swap"
+      rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+      <!-- Customized Bootstrap Stylesheet -->
+  <link href="../css1/bootstrap.min.css" rel="stylesheet" />
+    
+    <style>
+       
+        .container {
+            margin-top: 10px; /* Adjusted margin to avoid overlap with topbar */
+        }
+        .enquiry-section {
+            background:blue;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .enquiry-section h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .enquiry-section form .form-control {
+            border-radius: 0.375rem;
+        }
+        .form-label {
+            font-weight: 500;
+        }
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <!-- Topbar Start -->
+<div class="container-fluid bg-light p-0 wow fadeIn " data-wow-delay="0.1s">
+    <div class="row gx-0 d-none d-lg-flex align-items-center">
+        <!-- Left side: Google Translate -->
+        <div class="col-lg-7 px-5 text-start">
+            <div class="h-100 d-inline-flex align-items-center py-1">
+                <div id="google_translate_element"></div>
+                
+                <script type="text/javascript">
+                function googleTranslateElementInit() {
+                    new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+                }
+                </script>
+
+                <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
+        </div>
+
+        <!-- Right side: User Info and Social Media Links -->
+        <div class="col-lg-5 px-5 text-end">
+            <div class="h-100 d-inline-flex align-items-center py-3 justify-content-end">
+            </div>
+            
+            
+            
+            <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/profile.php?id=61564915165338"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-sm-square bg-white text-primary" href=""><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+ 
+
+<!-- Add the following script at the bottom of the page to initialize the tooltip -->
+<script>
+    // Initialize Bootstrap tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+</script>
+
+ 
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top py-lg-0 px-4 px-lg-5 wow fadeIn fixed-top"
+    data-wow-delay="0.1s">
+
+
+      <img class="img-fluid me-3" src="icon/icon-10.png" alt="Icon" />
+      
+      
+      <h1 class="m-0 text-primary">WildHaven</h1>
+      
+  
+   
+
+    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     
+
+    <div class="collapse navbar-collapse py-4 py-lg-0" id="navbarCollapse">
+      <div class="navbar-nav ms-auto">
+         <form action="https://www.google.com/search" method="GET" class="hm-searchbox">
+          <input type="search" id="search" name="q" placeholder="Search Google or type URL" />
+          <button className="icon" type="submit"><i className="small material-icons">search</i></button>
+        </form>
+        <div class="nav-item nav-link">
+          
+      
+        </div>
+      
+  
+  
+  
+  
+
+        <a href="../index.jsp" class="nav-item nav-link active">Home</a>
+        <a href="../about.jsp" class="nav-item nav-link">About</a>
+  
+        <div class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+          <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+            <a href="/CrudOperation" class="dropdown-item">Species Management</a>
+            <a href="conservation.jsp" class="dropdown-item">Conservation Areas</a>
+               <a href="../report.jsp" class="dropdown-item">Wildlife Reports</a>
+            <a href="#" class="dropdown-item">Volunteer</a>
+
+          </div>
+        </div>
+
+
+        <div class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Media</a>
+          
+          <div class="dropdown-menu rounded-0 rounded-bottom m-0">
+            <a href="../Wildlife/index.html" class="dropdown-item">Blogs</a>
+            <a href="../Event/index.html" class="dropdown-item">Events</a>
+          
+            <a href="../wildlife gallery/index.html" class="dropdown-item">Photo Gallery</a>
+            <a href="../Wildlife video/index.html" class="dropdown-item">Video Gallery</a>
+
+
+          </div>
+        </div>
+        <!-- <a href="#" class="nav-item nav-link"><i class="fa fa-search ms-3" id="search-icon"></i></a> -->
+
+          
+           
+      </div>
+      
+      <a href="../registration.jsp" class="btn btn-primary">Join<i class="fa fa-arrow-right ms-3"></i></a>
+        
+    </div>
+ 
+  </nav>
+  <!-- Navbar End -->
+    <div class="container text-primary fw-bold">
+      <marquee>🌿 Welcome to WildHaven! Join Us in Our Mission to Protect Wildlife and Preserve Nature 🌿</marquee>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <h2 class="text-primary mb-4">Event Overview</h2>
+                <table class="table table-bordered table-hover">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Title of the Event</th>
+                            <td>Wildlife Conservation Summit 2024</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Date and Time</th>
+                            <td>September 15-17, 2024 | 10:00 AM - 5:00 PM
+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Location</th>
+                            <td>
+                                NSIC & IMDC Building, NSTI Bhubaneswar ADIT IBM Lab 5th Floor, Block: D, Sector: A Mancheswar Industrial Estate, Odisha 751010.
+
+                                <br><a href="https://maps.app.goo.gl/MAYasQq7V6Vkz9kH8" target="_blank">View on Google Map</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Event Description</th>
+                            <td>The Wildlife Conservation Summit 2024 is a premier event that brings together experts, enthusiasts, and professionals dedicated to the preservation of wildlife. The summit features engaging talks, workshops, and networking opportunities focused on the latest conservation strategies and initiatives.
+</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Contact Person</th>
+                         <td>Jitesh Mohapatra, Sayan Rakshit</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <div class="enquiry-section">
+                    <h2 class="text-white mb-4">Have any inquiries? Contact us!</h2>
+                   <form>
+    <div class="mb-3">
+        <label for="name" class="form-label"><b>Name</b></label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label"><b>Email</b></label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+    </div>
+    <div class="mb-3">
+        <label for="designation" class="form-label"><b>Designation</b></label>
+        <select class="form-control" id="designation" required>
+            <option value="" disabled selected>Select your designation</option>
+            <option value="Student">Student</option>
+            <option value="Trainee">Trainee</option>
+            <option value="Employee">Employee</option>
+            <option value="Manager">Manager</option>
+            <option value="Executive">Executive</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="organization" class="form-label"><b>Organization</b></label>
+        <select class="form-control" id="organization" required>
+            <option value="" disabled selected>Select your organization type</option>
+            <option value="Government">Government</option>
+            <option value="Private">Private</option>
+            <option value="Non-Profit">Non-Profit</option>
+            <option value="Educational">Educational</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="subject" class="form-label"><b>Subject</b></label>
+        <input type="text" class="form-control" id="subject" placeholder="Subject of your inquiry" required>
+    </div>
+    <div class="mb-3">
+        <label for="message" class="form-label"><b>Message</b></label>
+        <textarea class="form-control" id="message" rows="4" placeholder="Your message" required></textarea>
+    </div>
+    <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Footer Start -->
+  <div class="container-fluid footer bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Address</h5>
+          <p class="mb-2">
+            <i class="fa fa-map-marker-alt me-3"></i>Bhubaneswar, Odisha, India
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-phone-alt me-3"></i>+012 345 67890
+          </p>
+          <p class="mb-2">
+            <i class="fa fa-envelope me-3"></i>team.wildhaven@gmail.com
+          </p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="about.jsp">About Us</a>
+       
+          <a class="btn btn-link" href="conservation.jsp">Our Services</a>
+          <a class="btn btn-link" href="#">Terms & Condition</a>
+         
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Popular Links</h5>
+          <a class="btn btn-link" href="https://bigcatsindia.com/">Bigcats India</a>
+          <a class="btn btn-link" href="https://www.tigersafariindia.com/">Tiger Safari</a>
+          <a class="btn btn-link" href="https://www.similipal.org/">Similipal Reserve</a>
+       
+        </div>
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Welcome to the WildHaven Newsletter</h5>
+           <p>Join our newsletter to stay updated on our latest wildlife conservation efforts and success stories.</p>
+          <div class="position-relative mx-auto" style="max-width: 400px">
+            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email" />
+            <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+              SignUp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="copyright">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="border-bottom" href="#">WildHaven</a>, All
+            Right Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end" style="display: none !important;">
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            Designed By
+            <a class="border-bottom" href="#"></a>
+            <br />Distributed By:
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer End -->
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+ <!-- Template Javascript -->
+  <script src="../js1/main.js"></script>
+
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission (e.g., send data to the server)
+            window.location.href = 'thankyou.html';
+        });
+    </script>
+      <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "40f6535b-f4fd-4da5-9334-91599b86c0b0", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "eab37542-ac5e-4718-8d4f-787f12a29357", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+
+</body>
+</html>
