@@ -1,13 +1,6 @@
 Wild Haven is a JAVA-based wildlife conservation and protection system designed to help track, manage, and preserve endangered species through efficient event monitoring and reporting. The platform enables users to stay updated with wildlife events and activities while supporting the efforts of conservationists and researchers.
 
-Features
-Event Updates: Regular updates on wildlife events, sightings, and conservation efforts.
-Wildlife Tracking: Detailed tracking of endangered species, habitats, and migratory patterns.
-Real-time Alerts: Notifications on critical wildlife incidents and environmental threats.
-User Engagement: Interface for users to report wildlife sightings or incidents.
-Interactive Map: View and explore conservation zones and wildlife populations.
-
-🚀 Features
+🚀 Features:
 Interactive Wildlife Database: Explore detailed information on various species, including their conservation status, natural habitat, and population count. This database serves as a valuable resource for researchers, conservationists, and the general public.
 
 User-Friendly Interface: Enjoy a sleek and intuitive design that ensures a seamless navigation experience across all devices. The platform's responsive layout adapts to different screen sizes, providing a consistent user experience.
@@ -26,10 +19,10 @@ Map Integration: View interactive maps that display the locations of wildlife an
 
 Adopt a Species Program: Contribute to wildlife conservation by adopting a species. This program allows individuals to support specific animals and their habitats, fostering a personal connection to conservation efforts.
 
-🛠 Technologies Used
+🛠 Technologies Used:
 Front-End: HTML5, CSS3, JavaScript, Bootstrap/Tailwind CSS, Back-End: Java, JSP, Servlets, Database: MySQL, APIs: Google Maps API, Version Control: Git, GitHub
 
-👥 Team Members
+👥 Team Members:
 Jitesh Mohapatra, Sayan Kumar Rakshit, Santosh Baral
 
 ![home](https://github.com/user-attachments/assets/f6d5c736-6b78-4e84-82e8-db6706340ca3)
