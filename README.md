@@ -1,5 +1,4 @@
-Wild Haven
-Wild Haven is a web-based wildlife conservation and protection system designed to help track, manage, and preserve endangered species through efficient event monitoring and reporting. The platform enables users to stay updated with wildlife events and activities while supporting the efforts of conservationists and researchers.
+Wild Haven is a JAVA-based wildlife conservation and protection system designed to help track, manage, and preserve endangered species through efficient event monitoring and reporting. The platform enables users to stay updated with wildlife events and activities while supporting the efforts of conservationists and researchers.
 
 Features
 Event Updates: Regular updates on wildlife events, sightings, and conservation efforts.
