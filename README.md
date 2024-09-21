@@ -29,7 +29,7 @@ Adopt a Species Program: Contribute to wildlife conservation by adopting a speci
 🛠 Technologies Used
 Front-End: HTML5, CSS3, JavaScript, Bootstrap/Tailwind CSS, Back-End: Java, JSP, Servlets, Database: MySQL, APIs: Google Maps API, Version Control: Git, GitHub
 
-👥 Team
+👥 Team Members
 Jitesh Mohapatra, Sayan Kumar Rakshit, Santosh Baral
 
 ![home](https://github.com/user-attachments/assets/f6d5c736-6b78-4e84-82e8-db6706340ca3)
