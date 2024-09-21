@@ -1,0 +1,105 @@
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.card-title {
+    color: #007b5e;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card-container .card {
+    flex: 1 1 calc(33.333% - 20px);
+    margin-bottom: 20px;
+}
+
+.card-text {
+    max-height: 100px;
+    overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease-out;
+}
+.card-text.expanded {
+    max-height: none;
+}
+.read-more-btn {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+}
+.read-more-content {
+    display: none;
+}
+.card-text.expanded .read-more-content {
+    display: inline;
+}
+.card-date {
+    font-size: 0.875rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+    .card img {
+        height: 180px; /* Set a consistent height */
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+        width: 100%; /* Makes sure the image takes the full width of its container */
+    }
+
+.custom-btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-btn:hover {
+    transform: scale(1.05); /* Slightly enlarges the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+
+/* Add these styles to your styles.css or within a <style> tag */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+}
+
+.card img {
+    transition: transform 0.3s ease;
+}
+
+.card img:hover {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+}
+
+.read-more-btn {
+    cursor: pointer;
+    color: #007b5e;
+    transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    color: #005f4f; /* Darker shade of green on hover */
+}
+
+

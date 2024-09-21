@@ -1,0 +1,90 @@
+package ibm_internship;
+
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
+    private static final long serialVersionUID = 1L;
+
+    public LoginServlet() {
+        super();
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        String uemail = request.getParameter("username");
+        String upwd = request.getParameter("password");
+        HttpSession session = request.getSession();
+        Connection con = null;
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Establish the connection to the database
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/wildlifeconservationdb?useSSL=false", "root", "Nsti123");
+
+            // Prepare the SQL statement to check the user table
+            PreparedStatement pst = con.prepareStatement("SELECT * FROM user WHERE uemail= ? AND upwd = ?");
+            pst.setString(1, uemail);
+            pst.setString(2, upwd);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                // User found, set user session attributes
+                session.setAttribute("name", rs.getString("uname"));
+                
+                // Redirect to the user dashboard
+                response.sendRedirect("index.jsp");
+            } else {
+                // Check in the admin table
+                PreparedStatement adminPst = con.prepareStatement("SELECT * FROM admin WHERE email= ? AND password = ?");
+                adminPst.setString(1, uemail);
+                adminPst.setString(2, upwd);
+                ResultSet adminRs = adminPst.executeQuery();
+
+                if (adminRs.next()) {
+                    // Admin found, set admin session attributes
+                    session.setAttribute("adminId", adminRs.getInt("id"));
+                    session.setAttribute("adminName", adminRs.getString("name"));
+                    session.setAttribute("adminEmail", adminRs.getString("email"));
+
+                    // Redirect to the admin dashboard
+                    response.sendRedirect("Admin/index.jsp");
+                } else {
+                    // Authentication failed, forward back to login with error
+                    request.setAttribute("status", "failed");
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+                    dispatcher.forward(request, response);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // Close the database connection if it was opened
+            try {
+                if (con != null) {
+                    con.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.getWriter().append("Served at: ").append(request.getContextPath());
+    }
+}
